@@ -18,7 +18,7 @@ init:
 	@echo "🌼 Initializing the project..."
 	@find . -name '*.lock' -delete
 	@find . -name '*overrides.yaml' -delete
-	@melos init
+	@melos bootstrap
 
 
 # ==================================================================================================

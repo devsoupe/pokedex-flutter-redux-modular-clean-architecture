@@ -1,0 +1,44 @@
+name: pokedex
+
+packages:
+  - .
+
+sdkPath: .fvm/versions/3.29.2
+
+dependencyOverridePaths:
+  - '**'
+
+command:
+  bootstrap:
+    runPubGetInParallel: true
+
+scripts:
+  # ==================================================================================================
+  # bootstrap
+  # ==================================================================================================
+
+  bootstrap:
+    run: melos bs
+    description: Run `melos bootstrap`
+
+
+  # ==================================================================================================
+  # default
+  # ==================================================================================================
+
+  pub:get:
+    exec: fvm flutter pub get
+    description: Run `flutter pub get` in selected or all packages. Includes prompt for packages.
+    packageFilters:
+      dirExists:
+        - lib
+
+  pub:run:build_runner:build:
+    exec: fvm flutter pub run build_runner build --delete-conflicting-outputs
+    description: Run `flutter pub run build_runner build` in selected or all packages. Includes prompt for packages.
+    packageFilters:
+      dependsOn: "build_runner"
+
+  clean:
+    run: fvm flutter clean
+    description: Run `flutter clean`.

@@ -1,4 +1,4 @@
-name: pokedex
+name: app
 description: "A new Flutter project."
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
@@ -9,20 +9,18 @@ dependencies:
   flutter:
     sdk: flutter
 
-  app:
-    path: packages/app
   feature:
-    path: packages/feature
+    path: ../feature
   domain:
-    path: packages/domain
+    path: ../domain
   data:
-    path: packages/data
+    path: ../data
   core:
-    path: packages/core
+    path: ../core
   common:
-    path: packages/common
+    path: ../common
   design:
-    path: packages/design
+    path: ../design
 
   cupertino_icons: 1.0.8
 
@@ -31,7 +29,6 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: 5.0.0
-  melos: 6.3.2
 
 flutter:
   uses-material-design: true

@@ -9,10 +9,14 @@ dependencies:
   flutter:
     sdk: flutter
 
-  app:
-    path: packages/app
-  feature:
-    path: packages/feature
+  app_pokedex:
+    path: packages/apps/app_pokedex
+  app_pokedex_widgetbook:
+    path: packages/apps/app_pokedex_widgetbook
+  feature_pokedex:
+    path: packages/features/feature_pokedex
+  feature_pokedex_widgetbook:
+    path: packages/features/feature_pokedex_widgetbook
   domain:
     path: packages/domain
   data:

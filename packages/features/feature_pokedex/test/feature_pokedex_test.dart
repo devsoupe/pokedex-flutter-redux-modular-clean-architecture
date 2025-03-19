@@ -1,5 +1,6 @@
-import 'package:design/design.dart';
 import 'package:flutter_test/flutter_test.dart';
+
+import 'package:feature_pokedex/feature_pokedex.dart';
 
 void main() {
   test('adds one to input values', () {

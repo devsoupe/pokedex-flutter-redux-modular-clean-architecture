@@ -3,7 +3,7 @@ name: pokedex
 packages:
   - packages/**
 
-sdkPath: .fvm/versions/3.29.2
+sdkPath: .fvm/flutter_sdk
 
 dependencyOverridePaths:
   - '**'

@@ -33,6 +33,7 @@ clean:
 	@find . -name '*.freezed.dart' -delete
 	@find . -name '*.chopper.dart' -delete
 	@find . -name '*.lock' -delete
+	@find . -name '*.iml' -delete
 	@echo " ╚ 🤖 Running flutter clean..."
 	@melos clean
 

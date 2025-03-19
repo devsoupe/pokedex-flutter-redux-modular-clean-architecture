@@ -1,4 +1,4 @@
-import 'package:design/design.dart';
+import 'package:feature_pokedex_widgetbook/feature_pokedex_widgetbook.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

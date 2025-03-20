@@ -1,4 +1,4 @@
-import 'package:design/components/button.dart' show Button;
+import 'package:design/design.dart';
 import 'package:flutter/material.dart';
 import 'package:widgetbook/widgetbook.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;

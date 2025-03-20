@@ -1,29 +1,17 @@
-import 'package:feature_pokedex_widgetbook/src/usecases/button.dart';
+import 'package:widgetbook/widgetbook.dart' hide AlignmentAddon;
 import 'package:flutter/material.dart';
-import 'package:widgetbook/widgetbook.dart';
+import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
+import 'feature_pokedex_widgetbook.directories.g.dart';
+
+@widgetbook.App()
 class FeaturePokedexWidgetbook extends StatelessWidget {
   const FeaturePokedexWidgetbook({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Widgetbook.material(
-      directories: [
-        WidgetbookFolder(
-          name: 'Widgets',
-          children: [
-            WidgetbookComponent(
-              name: 'Button',
-              useCases: [
-                WidgetbookUseCase(
-                  name: 'BaseButton',
-                  builder: (context) => ButtonUseCase(context),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ],
+      directories: directories,
       addons: [
         DeviceFrameAddon(
           initialDevice: Devices.ios.iPhone13,

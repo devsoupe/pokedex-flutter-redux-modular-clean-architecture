@@ -1,9 +1,12 @@
-import 'package:design/components/button.dart' show Button, ThemeSwitcherButton;
+import 'package:design/components/button.dart' show Button;
 import 'package:flutter/material.dart';
 import 'package:widgetbook/widgetbook.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
-@widgetbook.UseCase(name: 'BaseButton', type: Button)
+@widgetbook.UseCase(
+  name: 'BaseButton',
+  type: Button,
+)
 Widget ButtonUseCase(BuildContext context) {
   final buttonLabel = context.knobs.string(
     label: 'Button Label',

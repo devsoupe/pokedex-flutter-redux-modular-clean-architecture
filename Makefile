@@ -49,7 +49,7 @@ clean_library:
 build:
 	@echo "🚀 Building the project..."
 	@echo " ╠ 🛻  Building the all..."
-	@melos _pub:run:build_runner:build:all
+	@melos build
 
 
 # ==================================================================================================

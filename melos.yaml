@@ -11,6 +11,7 @@ dependencyOverridePaths:
 command:
   bootstrap:
     runPubGetInParallel: true
+    usePubspecOverrides: true
 
 scripts:
   # ==================================================================================================
@@ -39,6 +40,12 @@ scripts:
     packageFilters:
       dependsOn: "build_runner"
 
+  build:
+    run: |
+      melos pub:get --no-select && \
+      melos pub:run:build_runner:build --no-select
+    description: Run `flutter pub run build_runner build` except core package with no-select option.
+
   clean:
     run: fvm flutter clean
     description: Run `flutter clean`.
@@ -47,10 +54,3 @@ scripts:
   # ==================================================================================================
   # project needs
   # ==================================================================================================
-
-  _pub:run:build_runner:build:all:
-    exec: fvm flutter pub run build_runner build --delete-conflicting-outputs
-    description: Run `flutter pub run build_runner build` root package.
-    packageFilters:
-      dependsOn: "build_runner"
-      scope: "*pokedex"

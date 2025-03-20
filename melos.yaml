@@ -27,6 +27,10 @@ scripts:
   # default
   # ==================================================================================================
 
+  clean:
+    run: fvm flutter clean
+    description: Run `flutter clean`.
+
   pub:get:
     exec: fvm flutter pub get
     description: Run `flutter pub get` in selected or all packages. Includes prompt for packages.
@@ -46,11 +50,7 @@ scripts:
       melos pub:run:build_runner:build --no-select
     description: Run `flutter pub run build_runner build` except core package with no-select option.
 
-  clean:
-    run: fvm flutter clean
-    description: Run `flutter clean`.
-
 
   # ==================================================================================================
-  # project needs
+  # project
   # ==================================================================================================

@@ -1,62 +1,73 @@
+import 'package:feature_pokedex_widgetbook/src/usecases/button.dart';
 import 'package:flutter/material.dart';
+import 'package:widgetbook/widgetbook.dart';
 
 class FeaturePokedexWidgetbook extends StatelessWidget {
   const FeaturePokedexWidgetbook({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const MyHomePage(title: 'FeaturePokedexWidgetbook'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+    return Widgetbook.material(
+      directories: [
+        WidgetbookFolder(
+          name: 'Widgets',
+          children: [
+            WidgetbookComponent(
+              name: 'Button',
+              useCases: [
+                WidgetbookUseCase(
+                  name: 'BaseButton',
+                  builder: (context) => ButtonUseCase(context),
+                ),
+              ],
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ],
+      addons: [
+        DeviceFrameAddon(
+          initialDevice: Devices.ios.iPhone13,
+          devices: [
+            Devices.ios.iPhone13,
+            Devices.ios.iPhone13ProMax,
+            Devices.android.mediumPhone,
+          ],
+        ),
+        MaterialThemeAddon(
+          themes: [
+            WidgetbookTheme(name: 'Light', data: ThemeData.light()),
+            WidgetbookTheme(name: 'Dark', data: ThemeData.dark()),
+          ],
+        ),
+        TextScaleAddon(
+          min: 0.5,
+          max: 3.0,
+          divisions: 5,
+        ),
+        BuilderAddon(
+          name: 'Scaffold & SafeArea',
+          builder: (context, child) {
+            return Scaffold(
+              body: SingleChildScrollView(
+                child: SizedBox(
+                  width: double.infinity,
+                  height: MediaQuery.of(context).size.height,
+                  child: SafeArea(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Center(child: child),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            );
+            ;
+          },
+        ),
+      ],
     );
   }
 }
+

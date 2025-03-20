@@ -51,6 +51,9 @@ build:
 	@echo " ╠ 🛻  Building the all..."
 	@melos build
 
+build-style-dictionary:
+	@echo "🚀 Building the style dictionary..."
+	@style-dictionary-figma-flutter
 
 # ==================================================================================================
 # default

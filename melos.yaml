@@ -42,3 +42,15 @@ scripts:
   clean:
     run: fvm flutter clean
     description: Run `flutter clean`.
+
+
+  # ==================================================================================================
+  # project needs
+  # ==================================================================================================
+
+  _pub:run:build_runner:build:all:
+    exec: fvm flutter pub run build_runner build --delete-conflicting-outputs
+    description: Run `flutter pub run build_runner build` root package.
+    packageFilters:
+      dependsOn: "build_runner"
+      scope: "*pokedex"

@@ -33,7 +33,6 @@ clean:
 	@find . -name '*.freezed.dart' -delete
 	@find . -name '*.chopper.dart' -delete
 	@find . -name '*.lock' -delete
-	@find . -name '*.iml' -delete
 	@echo " ╚ 🤖 Running flutter clean..."
 	@melos clean
 
@@ -41,6 +40,16 @@ clean_library:
 	@echo "🧹 Cleaning the library..."
 	@#rm -rf ~/.gradle
 	@rm -rf ~/.pub-cache
+
+
+# ==================================================================================================
+# build
+# ==================================================================================================
+
+build:
+	@echo "🚀 Building the project..."
+	@echo " ╠ 🛻  Building the all..."
+	@melos _pub:run:build_runner:build:all
 
 
 # ==================================================================================================

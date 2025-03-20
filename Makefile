@@ -1,4 +1,4 @@
-.PHONY: install init clean pub-get pub-run-build_runner-build all
+.PHONY: install init clean pub-get pub-run-build_runner-build all build
 
 all: clean init build
 

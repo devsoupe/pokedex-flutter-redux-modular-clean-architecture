@@ -9,6 +9,9 @@ all: clean init build
 install:
 	@sh scripts/install.sh
 
+install-style-dictionary:
+	@echo "🚀 Installing the style dictionary..."
+	@npm install -g style-dictionary-figma-flutter
 
 # ==================================================================================================
 # init
@@ -74,7 +77,7 @@ pub-run-build_runner-build:
 # utility
 # ==================================================================================================
 
-# Flutter 버전 변경 ex) make change-flutter-version version=3.19.6
+# Flutter 버전 변경 ex) make change-flutter-version version=3.29.2
 
 FLUTTER_PATH := $(shell which flutter)
 FLUTTER_DIR := $(dir $(FLUTTER_PATH))

@@ -25,5 +25,6 @@ dev_dependencies:
 
   injectable_generator: 2.7.0
   build_runner: 2.4.15
+  envied_generator: 1.1.1
 
 flutter:

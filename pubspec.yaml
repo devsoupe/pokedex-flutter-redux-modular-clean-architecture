@@ -9,25 +9,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  app_pokedex:
-    path: packages/apps/app_pokedex
-  app_pokedex_widgetbook:
-    path: packages/apps/app_pokedex_widgetbook
-  feature_pokedex:
-    path: packages/features/feature_pokedex
-  feature_pokedex_widgetbook:
-    path: packages/features/feature_pokedex_widgetbook
-  domain:
-    path: packages/domain
-  data:
-    path: packages/data
-  core:
-    path: packages/core
-  common:
-    path: packages/common
-  design:
-    path: packages/design
-
   cupertino_icons: 1.0.8
 
 dev_dependencies:
@@ -36,6 +17,7 @@ dev_dependencies:
 
   flutter_lints: 5.0.0
   melos: 6.3.2
+  flutter_dotenv: 5.2.1
 
 flutter:
   uses-material-design: true

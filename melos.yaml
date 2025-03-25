@@ -44,6 +44,13 @@ scripts:
     packageFilters:
       dependsOn: "build_runner"
 
+  pub:run:flutter_flavorizr:
+    exec: fvm flutter pub run flutter_flavorizr
+    description: Run `flutter pub run flutter_flavorizr` in selected packages. Includes prompt for packages.
+    packageFilters:
+      dependsOn: "build_runner"
+      scope: "*app_pokedex"
+
   build:
     run: |
       melos pub:get --no-select && \

@@ -69,6 +69,11 @@ pub-run-build_runner-build:
 	@echo " ╚ 🛻  flutter pub run build_runner build"
 	@melos pub:run:build_runner:build
 
+pub-run-flutter_flavorizr:
+	@echo "🤖 Running flutter command..."
+	@echo " ╚ 🛻  flutter pub run flutter_flavorizr"
+	@melos pub:run:flutter_flavorizr
+
 
 # ==================================================================================================
 # utility

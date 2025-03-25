@@ -1,0 +1,22 @@
+app:
+  android:
+    flavorDimensions: "flavor-type"
+  ios: {}
+
+flavors:
+  debug:
+    app:
+      name: "Pokedex Debug"
+
+    android:
+      applicationId: "com.example.pokedex.dev"
+    ios:
+      bundleId: "com.example.pokedex.dev"
+  release:
+    app:
+      name: "Pokedex"
+
+    android:
+      applicationId: "com.example.pokedex"
+    ios:
+      bundleId: "com.example.pokedex"

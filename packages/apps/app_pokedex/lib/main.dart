@@ -1,9 +1,15 @@
-import 'package:feature_pokedex/feature_pokedex.dart';
-import 'package:flutter/material.dart';
+import 'dart:async';
 
-import 'di/configurations.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+import 'app.dart';
+import 'flavors.dart';
 
 void main() {
-  configureDependencies();
-  runApp(const FeaturePokedex());
+  F.appFlavor = Flavor.values.firstWhere(
+    (element) => element.name == appFlavor,
+  );
+
+  runApp(const App());
 }

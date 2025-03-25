@@ -1,0 +1,6 @@
+#include? "Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"
+#include "Generated.xcconfig"
+
+ASSET_PREFIX=debug
+BUNDLE_NAME=Pokedex Debug
+BUNDLE_DISPLAY_NAME=Pokedex Debug

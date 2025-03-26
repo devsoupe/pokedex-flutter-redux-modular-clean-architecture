@@ -85,6 +85,11 @@ pub-run-flutter_flavorizr:
 # utility
 # ==================================================================================================
 
+format:
+	@echo "⚡ Formatting the code"
+	@dart fix --apply
+	@dart format --set-exit-if-changed .
+
 # Flutter 버전 변경 ex) make change-flutter-version version=3.19.6
 
 FLUTTER_PATH := $(shell which flutter)

@@ -27,7 +27,9 @@ class LightTheme implements AppTheme {
         backgroundColor: Colors.white,
         elevation: 0,
         centerTitle: false,
-        titleTextStyle: tokens.textStyle.title1Title1B.copyWith(color: Colors.black),
+        titleTextStyle: tokens.textStyle.title1Title1B.copyWith(
+          color: Colors.black,
+        ),
         iconTheme: const IconThemeData(color: Colors.black),
       ),
       dividerTheme: DividerThemeData(
@@ -37,12 +39,7 @@ class LightTheme implements AppTheme {
       ),
       tabBarTheme: TabBarTheme(
         indicator: const BoxDecoration(
-          border: Border(
-            bottom: BorderSide(
-              color: Colors.blue,
-              width: 4,
-            ),
-          ),
+          border: Border(bottom: BorderSide(color: Colors.blue, width: 4)),
         ),
         labelStyle: tokens.textStyle.title4Title4B,
         labelColor: tokens.color.colorsPriamary10,

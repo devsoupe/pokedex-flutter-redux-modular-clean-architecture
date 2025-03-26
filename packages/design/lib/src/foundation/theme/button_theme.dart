@@ -38,28 +38,55 @@ class AppButtonTheme extends ThemeExtension<AppButtonTheme> {
   }) {
     return AppButtonTheme(
       solidButtonColor: solidButtonColor ?? this.solidButtonColor,
-      solidButtonDisableColor: solidButtonDisableColor ?? this.solidButtonDisableColor,
+      solidButtonDisableColor:
+          solidButtonDisableColor ?? this.solidButtonDisableColor,
       lineButtonColor: lineButtonColor ?? this.lineButtonColor,
-      lineButtonDisableColor: lineButtonDisableColor ?? this.lineButtonDisableColor,
-      lineButtonBorderColor: lineButtonBorderColor ?? this.lineButtonBorderColor,
-      lineButtonDisableBorderColor: lineButtonDisableBorderColor ?? this.lineButtonDisableBorderColor,
+      lineButtonDisableColor:
+          lineButtonDisableColor ?? this.lineButtonDisableColor,
+      lineButtonBorderColor:
+          lineButtonBorderColor ?? this.lineButtonBorderColor,
+      lineButtonDisableBorderColor:
+          lineButtonDisableBorderColor ?? this.lineButtonDisableBorderColor,
       lineButtonTextColor: lineButtonTextColor ?? this.lineButtonTextColor,
-      lineButtonDisableTextColor: lineButtonDisableTextColor ?? this.lineButtonDisableTextColor,
+      lineButtonDisableTextColor:
+          lineButtonDisableTextColor ?? this.lineButtonDisableTextColor,
     );
   }
 
   @override
-  ThemeExtension<AppButtonTheme> lerp(ThemeExtension<AppButtonTheme>? other, double t) {
+  ThemeExtension<AppButtonTheme> lerp(
+    ThemeExtension<AppButtonTheme>? other,
+    double t,
+  ) {
     if (other is! AppButtonTheme) return this;
     return AppButtonTheme(
-      solidButtonColor: Color.lerp(solidButtonColor, other.solidButtonColor, t)!,
-      solidButtonDisableColor: Color.lerp(solidButtonDisableColor, other.solidButtonDisableColor, t)!,
+      solidButtonColor:
+          Color.lerp(solidButtonColor, other.solidButtonColor, t)!,
+      solidButtonDisableColor:
+          Color.lerp(
+            solidButtonDisableColor,
+            other.solidButtonDisableColor,
+            t,
+          )!,
       lineButtonColor: Color.lerp(lineButtonColor, other.lineButtonColor, t)!,
-      lineButtonDisableColor: Color.lerp(lineButtonDisableColor, other.lineButtonDisableColor, t)!,
-      lineButtonBorderColor: Color.lerp(lineButtonBorderColor, other.lineButtonBorderColor, t)!,
-      lineButtonDisableBorderColor: Color.lerp(lineButtonDisableBorderColor, other.lineButtonDisableBorderColor, t)!,
-      lineButtonTextColor: Color.lerp(lineButtonTextColor, other.lineButtonTextColor, t)!,
-      lineButtonDisableTextColor: Color.lerp(lineButtonDisableTextColor, other.lineButtonDisableTextColor, t)!,
+      lineButtonDisableColor:
+          Color.lerp(lineButtonDisableColor, other.lineButtonDisableColor, t)!,
+      lineButtonBorderColor:
+          Color.lerp(lineButtonBorderColor, other.lineButtonBorderColor, t)!,
+      lineButtonDisableBorderColor:
+          Color.lerp(
+            lineButtonDisableBorderColor,
+            other.lineButtonDisableBorderColor,
+            t,
+          )!,
+      lineButtonTextColor:
+          Color.lerp(lineButtonTextColor, other.lineButtonTextColor, t)!,
+      lineButtonDisableTextColor:
+          Color.lerp(
+            lineButtonDisableTextColor,
+            other.lineButtonDisableTextColor,
+            t,
+          )!,
     );
   }
 

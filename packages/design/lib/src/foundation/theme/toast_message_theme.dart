@@ -21,22 +21,25 @@ class AppToastMessageTheme extends ThemeExtension<AppToastMessageTheme> {
     Color? backgroundColor,
     Color? titleColor,
     Color? bodyColor,
-  }) =>
-      AppToastMessageTheme(
-        backgroundColor: backgroundColor ?? this.backgroundColor,
-        titleColor: titleColor ?? this.titleColor,
-        bodyColor: bodyColor ?? this.bodyColor,
-      );
+  }) => AppToastMessageTheme(
+    backgroundColor: backgroundColor ?? this.backgroundColor,
+    titleColor: titleColor ?? this.titleColor,
+    bodyColor: bodyColor ?? this.bodyColor,
+  );
 
   @override
-  ThemeExtension<AppToastMessageTheme> lerp(ThemeExtension<AppToastMessageTheme>? other, double t) =>
+  ThemeExtension<AppToastMessageTheme> lerp(
+    ThemeExtension<AppToastMessageTheme>? other,
+    double t,
+  ) =>
       other is! AppToastMessageTheme
           ? this
           : AppToastMessageTheme(
-        backgroundColor: Color.lerp(backgroundColor, other.backgroundColor, t)!,
-        titleColor: Color.lerp(titleColor, other.titleColor, t)!,
-        bodyColor: Color.lerp(bodyColor, other.bodyColor, t)!,
-      );
+            backgroundColor:
+                Color.lerp(backgroundColor, other.backgroundColor, t)!,
+            titleColor: Color.lerp(titleColor, other.titleColor, t)!,
+            bodyColor: Color.lerp(bodyColor, other.bodyColor, t)!,
+          );
 
   static AppToastMessageTheme of(BuildContext context) {
     return AppToastMessageTheme(

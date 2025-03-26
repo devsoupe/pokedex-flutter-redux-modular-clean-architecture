@@ -18,7 +18,7 @@ class FeaturePokedex extends StatelessWidget {
             themeMode: ThemeMode.light,
             home: const MyHomePage(title: 'FeaturePokedex'),
           );
-        }
+        },
       ),
     );
   }
@@ -54,10 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: context.tokens.textStyle.title1Title1B,
-            ),
+            Text('$_counter', style: context.tokens.textStyle.title1Title1B),
           ],
         ),
       ),

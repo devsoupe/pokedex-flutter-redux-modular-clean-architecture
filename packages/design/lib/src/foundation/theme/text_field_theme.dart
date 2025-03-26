@@ -25,7 +25,10 @@ class AppTextFieldTheme extends ThemeExtension<AppTextFieldTheme> {
   ThemeExtension<AppTextFieldTheme> copyWith() => this;
 
   @override
-  ThemeExtension<AppTextFieldTheme> lerp(ThemeExtension<AppTextFieldTheme>? other, double t) => this;
+  ThemeExtension<AppTextFieldTheme> lerp(
+    ThemeExtension<AppTextFieldTheme>? other,
+    double t,
+  ) => this;
 
   static AppTextFieldTheme of(BuildContext context) {
     final tokens = context.tokens;
@@ -44,8 +47,14 @@ class AppTextFieldTheme extends ThemeExtension<AppTextFieldTheme> {
       errorBorder: OutlineInputBorder(
         borderSide: BorderSide(color: tokens.color.colorsGrey10),
       ),
-      defalutContentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-      noLabelContentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      defalutContentPadding: const EdgeInsets.symmetric(
+        horizontal: 16,
+        vertical: 12,
+      ),
+      noLabelContentPadding: const EdgeInsets.symmetric(
+        horizontal: 16,
+        vertical: 16,
+      ),
     );
   }
 }

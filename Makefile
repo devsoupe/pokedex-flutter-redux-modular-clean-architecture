@@ -88,7 +88,7 @@ pub-run-flutter_flavorizr:
 format:
 	@echo "⚡ Formatting the code"
 	@dart fix --apply
-	@dart format --set-exit-if-changed .
+	@dart format .
 
 # Flutter 버전 변경 ex) make change-flutter-version version=3.19.6
 

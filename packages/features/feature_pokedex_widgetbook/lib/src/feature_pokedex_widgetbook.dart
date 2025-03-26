@@ -45,7 +45,6 @@ class FeaturePokedexWidgetbook extends StatelessWidget {
                 ),
               ),
             );
-            ;
           },
         ),
       ],

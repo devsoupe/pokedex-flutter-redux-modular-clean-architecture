@@ -12,7 +12,10 @@ class TokenInterceptor extends Interceptor {
   TokenInterceptor(this.dio);
 
   @override
-  Future<void> onError(DioException err, ErrorInterceptorHandler handler) async {
+  Future<void> onError(
+    DioException err,
+    ErrorInterceptorHandler handler,
+  ) async {
     // Logger.log(
     //     functionName: "TokenInterceptor",
     //     msg: "Reached ${err.type} ${err.response?.statusCode}");

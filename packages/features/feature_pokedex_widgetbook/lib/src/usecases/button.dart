@@ -3,10 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:widgetbook/widgetbook.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
-@widgetbook.UseCase(
-  name: 'BaseButton',
-  type: Button,
-)
+@widgetbook.UseCase(name: 'BaseButton', type: Button)
 Widget ButtonUseCase(BuildContext context) {
   final buttonLabel = context.knobs.string(
     label: 'Button Label',
@@ -24,18 +21,9 @@ Widget ButtonUseCase(BuildContext context) {
   );
 
   final textStyleOption = [
-    _TextStyleOption(
-      optionLabel: 'Large',
-      textStyle: TextStyle(fontSize: 14),
-    ),
-    _TextStyleOption(
-      optionLabel: 'Medium',
-      textStyle: TextStyle(fontSize: 12),
-    ),
-    _TextStyleOption(
-      optionLabel: 'Small',
-      textStyle: TextStyle(fontSize: 11),
-    ),
+    _TextStyleOption(optionLabel: 'Large', textStyle: TextStyle(fontSize: 14)),
+    _TextStyleOption(optionLabel: 'Medium', textStyle: TextStyle(fontSize: 12)),
+    _TextStyleOption(optionLabel: 'Small', textStyle: TextStyle(fontSize: 11)),
   ];
 
   final textStyle = context.knobs.list(
@@ -54,10 +42,7 @@ Widget ButtonUseCase(BuildContext context) {
 }
 
 class _TextStyleOption {
-  const _TextStyleOption({
-    required this.optionLabel,
-    required this.textStyle,
-  });
+  const _TextStyleOption({required this.optionLabel, required this.textStyle});
 
   final String optionLabel;
   final TextStyle textStyle;

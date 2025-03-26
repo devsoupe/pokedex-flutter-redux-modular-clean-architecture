@@ -1,7 +1,4 @@
-enum Flavor {
-  debug,
-  release,
-}
+enum Flavor { debug, release }
 
 class F {
   static late final Flavor appFlavor;
@@ -16,5 +13,4 @@ class F {
         return 'Pokedex';
     }
   }
-
 }

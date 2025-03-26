@@ -3,4 +3,4 @@ import 'package:injectable/injectable.dart';
 import 'configurations.config.dart';
 
 @InjectableInit()
-void configureFeaturePokedexDependencies(GetIt getIt) =>  getIt.init();
+void configureFeaturePokedexDependencies(GetIt getIt) => getIt.init();

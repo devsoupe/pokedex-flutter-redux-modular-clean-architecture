@@ -20,16 +20,17 @@ class Button extends StatelessWidget {
       onPressed: () {
         showDialog<String>(
           context: context,
-          builder: (BuildContext context) => Dialog(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Text(
-                responseText,
-                textAlign: TextAlign.center,
-                style: textStyle.copyWith(color: color),
+          builder:
+              (BuildContext context) => Dialog(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Text(
+                    responseText,
+                    textAlign: TextAlign.center,
+                    style: textStyle.copyWith(color: color),
+                  ),
+                ),
               ),
-            ),
-          ),
         );
       },
       icon: Icon(Icons.favorite, color: color),

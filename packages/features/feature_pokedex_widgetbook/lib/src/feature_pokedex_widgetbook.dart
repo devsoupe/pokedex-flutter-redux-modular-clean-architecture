@@ -27,11 +27,7 @@ class FeaturePokedexWidgetbook extends StatelessWidget {
             WidgetbookTheme(name: 'Dark', data: ThemeData.dark()),
           ],
         ),
-        TextScaleAddon(
-          min: 0.5,
-          max: 3.0,
-          divisions: 5,
-        ),
+        TextScaleAddon(min: 0.5, max: 3.0, divisions: 5),
         BuilderAddon(
           name: 'Scaffold & SafeArea',
           builder: (context, child) {
@@ -43,9 +39,7 @@ class FeaturePokedexWidgetbook extends StatelessWidget {
                   child: SafeArea(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Center(child: child),
-                      ],
+                      children: [Center(child: child)],
                     ),
                   ),
                 ),
@@ -58,4 +52,3 @@ class FeaturePokedexWidgetbook extends StatelessWidget {
     );
   }
 }
-

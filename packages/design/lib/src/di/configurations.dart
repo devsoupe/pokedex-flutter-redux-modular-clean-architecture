@@ -3,4 +3,4 @@ import 'package:injectable/injectable.dart';
 import 'configurations.config.dart';
 
 @InjectableInit()
-void configureDesignDependencies(GetIt getIt) =>  getIt.init();
+void configureDesignDependencies(GetIt getIt) => getIt.init();

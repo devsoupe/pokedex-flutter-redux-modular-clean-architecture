@@ -9,12 +9,10 @@
 # packages, and plugins designed to encourage good coding practices.
 include: package:flutter_lints/flutter.yaml
 
+formatter:
+  page_width: 120
+
 analyzer:
-  plugins:
-    - dart
-  code-style:
-    format:
-      line-length: 120
 
   exclude:
     - "**/*.g.dart"

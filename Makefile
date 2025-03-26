@@ -9,6 +9,8 @@ all: clean init build
 install:
 	@sh scripts/install.sh
 
+install_tools:
+	@sh scripts/install_tools.sh
 
 # ==================================================================================================
 # init
@@ -88,7 +90,8 @@ pub-run-flutter_flavorizr:
 format:
 	@echo "⚡ Formatting the code"
 	@dart fix --apply
-	@dart format .
+
+	@dart format --set-exit-if-changed .
 
 # Flutter 버전 변경 ex) make change-flutter-version version=3.19.6
 

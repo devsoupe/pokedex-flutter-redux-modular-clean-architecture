@@ -13,6 +13,10 @@ dependencies:
 
   get_it: 8.0.3
   injectable: 2.5.0
+  figma2flutter: 0.3.1-alpha
+
+  design:
+    path: ../../design
 
 dev_dependencies:
   flutter_test:

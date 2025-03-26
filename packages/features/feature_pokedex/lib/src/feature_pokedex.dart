@@ -1,3 +1,4 @@
+import 'package:design/design.dart';
 import 'package:flutter/material.dart';
 
 class FeaturePokedex extends StatelessWidget {
@@ -6,12 +7,19 @@ class FeaturePokedex extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+    return Tokens(
+      tokens: DefaultTokens(),
+      child: Builder(
+        builder: (context) {
+          return MaterialApp(
+            title: 'Flutter Demo',
+            theme: LightTheme.themeData(context),
+            darkTheme: DarkTheme.themeData(context),
+            themeMode: ThemeMode.light,
+            home: const MyHomePage(title: 'FeaturePokedex'),
+          );
+        }
       ),
-      home: const MyHomePage(title: 'FeaturePokedex'),
     );
   }
 }
@@ -38,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: context.tokens.color.colorsGreen98,
         title: Text(widget.title),
       ),
       body: Center(
@@ -48,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text('You have pushed the button this many times:'),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+              style: context.tokens.textStyle.title1Title1B,
             ),
           ],
         ),

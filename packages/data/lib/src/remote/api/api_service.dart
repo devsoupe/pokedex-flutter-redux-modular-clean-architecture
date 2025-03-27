@@ -12,7 +12,10 @@ part 'api_service.g.dart';
 @RestApi()
 abstract class ApiService {
   factory ApiService() {
-    final apiLogger = TalkerDioLogger(talker: Talker(), settings: const TalkerDioLoggerSettings());
+    final apiLogger = TalkerDioLogger(
+      talker: Talker(),
+      settings: const TalkerDioLoggerSettings(),
+    );
 
     final baseOptions = BaseOptions(
       connectTimeout: const Duration(seconds: 5),

@@ -84,7 +84,11 @@ format:
 	@echo "⚡ Formatting the code"
 	@dart fix --apply
 
-	@dart format --set-exit-if-changed .
+	@DART_FILES=$$(find . -name "*.dart" | grep -v -f .formatter-ignore); \
+	if [ -n "$$DART_FILES" ]; then \
+		dart format $$DART_FILES; \
+	fi
+
 
 # Flutter 버전 변경 ex) make change-flutter-version version=3.19.6
 

@@ -44,13 +44,6 @@ clean_library:
 	@rm -rf ~/.pub-cache
 
 # ==================================================================================================
-# gen
-# ==================================================================================================
-
-gen_design_token:
-	@figma2flutter --input token.json --output packages/design/lib/src/tokens/generated/
-
-# ==================================================================================================
 # build
 # ==================================================================================================
 
@@ -58,10 +51,10 @@ build:
 	@echo "🚀 Building the project..."
 	@echo " ╠ 🛻  Building the all..."
 	@melos build
+	@make build_design_token
 
-build-style-dictionary:
-	@echo "🚀 Building the style dictionary..."
-	@style-dictionary-figma-flutter
+build_design_token:
+	@figma2flutter --input token.json --output packages/design/lib/src/tokens/generated/
 
 # ==================================================================================================
 # default

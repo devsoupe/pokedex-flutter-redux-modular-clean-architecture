@@ -1,4 +1,4 @@
-import 'package:design/src/foundation/generated/tokens.g.dart';
+import 'package:design/src/tokens/generated/tokens.g.dart';
 import 'package:flutter/material.dart';
 
 class AppTextFieldTheme extends ThemeExtension<AppTextFieldTheme> {

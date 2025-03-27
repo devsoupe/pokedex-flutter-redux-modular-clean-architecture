@@ -4,7 +4,7 @@ import 'package:widgetbook/widgetbook.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 @widgetbook.UseCase(name: 'BaseButton', type: Button)
-Widget ButtonUseCase(BuildContext context) {
+Widget buttonUseCase(BuildContext context) {
   final buttonLabel = context.knobs.string(
     label: 'Button Label',
     initialValue: 'ありがとう！',

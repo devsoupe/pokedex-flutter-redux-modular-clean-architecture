@@ -3,7 +3,7 @@ import 'package:design/src/foundation/theme/button_theme.dart';
 import 'package:design/src/foundation/theme/dialog_theme.dart';
 import 'package:design/src/foundation/theme/text_field_theme.dart';
 import 'package:design/src/foundation/theme/toast_message_theme.dart';
-import 'package:design/src/foundation/generated/tokens.g.dart';
+import 'package:design/src/tokens/generated/tokens.g.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

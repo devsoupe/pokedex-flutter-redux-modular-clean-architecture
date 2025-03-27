@@ -12,3 +12,6 @@ fvm flutter pub get
 fvm dart pub global activate melos 6.3.2
 fvm dart pub add melos:6.3.2 --dev
 fvm dart pub get
+
+# figma to flutter
+fvm dart pub global activate figma2flutter 0.3.1-alpha

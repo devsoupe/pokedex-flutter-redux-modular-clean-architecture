@@ -9,7 +9,7 @@ all: clean init build
 install:
 	@sh scripts/install.sh
 
-install_tools:
+install-tools:
 	@sh scripts/install_tools.sh
 
 # ==================================================================================================
@@ -38,7 +38,7 @@ clean:
 	@echo " ╚ 🤖 Running flutter clean..."
 	@melos clean
 
-clean_library:
+clean-library:
 	@echo "🧹 Cleaning the library..."
 	@#rm -rf ~/.gradle
 	@rm -rf ~/.pub-cache
@@ -51,10 +51,21 @@ build:
 	@echo "🚀 Building the project..."
 	@echo " ╠ 🛻  Building the all..."
 	@melos build
-	@make build_design_token
+	@make build-design-token
 
-build_design_token:
+build-design-token:
 	@figma2flutter --input token.json --output packages/design/lib/src/tokens/generated/
+
+build-swagger:
+	@echo "📟 Building the swagger..."
+	@echo " ╠ 🧹 Cleaning the swagger..."
+	@rm -rf packages/core/lib/src/swagger_rest_api/model/generated && mkdir -p core/lib/src/swagger_rest_api/model/generated
+	@rm -rf packages/core/lib/src/swagger_rest_api/api/api_response_code.dart
+	@echo " ╠ 🚜 Building the core..."
+	@melos _pub:run:build_runner:build:core
+	@echo " ╚ 📃 Generating the swagger api response code..."
+	@dart run packages/core/lib/src/swagger_rest_api/api/api_response_code_generator.dart
+
 
 # ==================================================================================================
 # default
